@@ -1,0 +1,1 @@
+create view Office_Furniture_Pivot as (select o.item_id, o.name as type, o.status, d.attr_value_id, d.attr_id, d.value, a.name from office_furniture o, details d, att_type a where o.item_id = d.item_id and d.attr_id = a.attr_id group by type);
